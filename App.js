@@ -1,10 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native';
+
+const image = { uri: "https://fondosmil.com/fondo/14060.jpg" };
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Desarrollo Movil Integral</Text>
+      <Text>React Native</Text>
+      <Image
+          style={{ width: 100, height: 100, marginBottom: 15 }}
+          source={require("./assets/Profile.png")}
+        />
+      <Text>Ricardo Daniel Flores Montoya</Text>
+      <Text>170965</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +22,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1e90ff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  baseText: {
+    fontFamily: "Cochin"
+  },
+  image: {
+    flex: 1,
+    //justifyContent: "center"
   },
 });
